@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+.name-field {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Distributes space between the inputs */
+}
+
+.name-field input[type="text"] {
+    width: 48%; /* Sets each input to take up roughly half the container's width */
+}
+
+.password-field {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Distributes space between the inputs */
+}
+
+.password-field input[type="password"] {
+    width: 48%; /* Sets each input to take up roughly half the container's width */
+}
+
+.submit-field {
+    display: flex; /* Ensures the buttons are on the same line */
+    justify-content: space-between; /* Optional: Adjusts the space between buttons */
+}
+
+.register-button {
+    background-color: blue; /* Sets the background color to blue */
+    color: white; /* Sets the text color to white */
+    border: none; /* Removes the default border */
+    padding: 10px 20px; /* Adds some padding for better visual appearance */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+}
+
+.sign-in-button {
+    background-color: green; /* Sets the background color to green */
+    color: white; /* Sets the text color to white */
+    border: none; /* Removes the default border */
+    padding: 10px 20px; /* Adds some padding for better visual appearance */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Add some space around the agreement section */
+}
+
+.agreement input[type="checkbox"] {
+    margin-right: 5px; /* Space out the checkbox from the label */
+}
+
+.terms {
+    font-size: 14px; /* Set the size of the text */
+    margin: 10px 0; /* Add some space above and below the terms text */
+    color: #666; /* A lighter color for the text */
+    line-height: 1.4; /* A comfortable line height for readability */
+}
+
+/* Styles for the buttons to share one line and have different colors */
+.submit-field {
+    display: flex; /* Ensures the buttons are on the same line */
+    justify-content: space-between; /* Adjusts the space between buttons */
+}
+
+.submit-field input[type="submit"] {
+    width: 48%; /* Adjusts each button to take up roughly half the container's width */
+    margin: 0; /* Resets the margin */
+}
+
+@media (max-width: 600px) {
+    .submit-field input[type="submit"],
+    .name-field input[type="text"],
+    .password-field input[type="password"] {
+        width: 100%; /* Makes the buttons stack on smaller screens */
+        margin-bottom: 10px; /* Adds space between stacked elements */
+    }
+    
+    .submit-field {
+        flex-direction: column; /* Stack the buttons vertically on smaller screens */
+    }
+}
